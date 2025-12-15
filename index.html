@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Eventos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Gestor de Eventos</h1>
+  <div class="nav-buttons">
+    <button id="btnEventos" class="nav active">Eventos Disponibles</button>
+    <button id="btnInscripciones" class="nav">Mis Inscripciones</button>
+  </div>
+</header>
+
+<main>
+  <!-- EVENTOS -->
+  <section id="eventosSection">
+    <h2 class="section-title">Eventos Disponibles</h2>
+
+    <div class="filtros-contenedor">
+      <input type="search" id="busquedaInput" placeholder="🔍 Buscar por nombre del evento...">
+      <select id="filtroCategoria">
+        <option value="">Todas las categorías</option>
+      </select>
+      <button id="limpiarFiltros">Limpiar Filtros</button>
+    </div>
+
+    <div id="eventosGrid" class="grid"></div>
+  </section>
+
+  <!-- INSCRIPCIONES -->
+  <section id="inscripcionesSection" class="hidden">
+    <h2 class="section-title">Mis Inscripciones</h2>
+    <div id="inscripcionesGrid" class="grid"></div>
+  </section>
+</main>
+
+<!-- MODAL DETALLES -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="cerrarModal">×</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<!-- MODAL CANCELAR -->
+<div id="confirmModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>¿Deseas cancelar la inscripción?</h3>
+    <div class="modal-buttons">
+      <button id="btnNo" class="no">No</button>
+      <button id="btnYes" class="si">Sí</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- BOTÓN FLOTA WHATSAPP -->
+<a href="https://wa.me/51912345678" target="_blank" class="whatsapp-btn">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
