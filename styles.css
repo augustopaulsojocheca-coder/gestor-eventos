@@ -244,3 +244,79 @@ header{
   transform:scale(1.1);
 }
 
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* TABLETS (hasta 900px) */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .filtros-contenedor {
+    flex-wrap: wrap;
+  }
+
+  .filtros-contenedor input,
+  .filtros-contenedor select {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* CELULARES (hasta 600px) */
+  @media (max-width: 600px) {
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .modal-buttons {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .filtros-contenedor {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 15px;
+  }
+
+  #limpiarFiltros {
+    width: 100%;
+  }
+
+  /* WhatsApp más cómodo en móvil */
+  .whatsapp {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    bottom: 15px;
+    left: 15px;
+  }
+}
